@@ -2,9 +2,15 @@ version: "3"
 services:
   server:
     build: .
+    ports:
+      - "27701:27701"
+    volumes:
+      - data-volume:/app/data
     deploy:
       restart_policy:
         condition: any
         max_attempts: 2
         delay: 5s
         window: 120s
+volumes:
+  data-volume: ${ANKI_DATA_VOLUME}
