@@ -8,7 +8,7 @@ RUN git clone --depth=1 --recursive https://github.com/tsudoko/anki-sync-server.
 
 RUN cd /app/server/anki-bundled && pip install -r requirements.txt
 RUN pip install webob
-COPY ankisyncd.conf /app/data/ankisyncd.conf
+COPY ankisyncd.conf /app/server/ankisyncd.conf
 COPY start.sh /app/start.sh
 RUN ls -lah /app
 
