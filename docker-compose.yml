@@ -2,3 +2,9 @@ version: "3"
 services:
   server:
     build: .
+    deploy:
+      restart_policy:
+        condition: any
+        max_attempts: 2
+        delay: 5s
+        window: 120s
