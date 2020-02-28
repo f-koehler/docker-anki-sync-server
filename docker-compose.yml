@@ -13,4 +13,4 @@ services:
         delay: 5s
         window: 120s
 volumes:
-  data-volume: ${ANKI_DATA_VOLUME}
+  data-volume:
